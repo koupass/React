@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Page Title</title>
+		
+		
+        <meta name="viewport" content="width-device-width, initial-scale-1" >
+        
+		<link rel="stylesheet" href="css/jquery-ui.min.css">
+        
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+		<link rel="stylesheet" href="css/style.css">
+		
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		
+		<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.js"></script>
+        <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.js"></script>
+        <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.min.js"></script>
+		
+		
+		<script src="js/noteboards.js" type="text/babel"></script>
+		<!--<script src="js/board.js" type="text/babel"></script>
+		<script src="js/note.js" type="text/babel"></script>-->
+		<script src="js/checkbox.js" type="text/babel"></script>
+	  
+	</head>
+
+	<body>
+	<div id="board-container"></div>
+	<!--<div id="checkbox-container"></div>-->
+	<div id="note-container"></div>
+	<div id="root"></div>
+		<script type="text/babel">
+				  	  
+			var HelloWorld = React.createClass({
+				render: function(){
+					return (
+						<div>
+							<h1>{this.props.text}</h1>
+							<p> { this.props.children }</p>
+						</div>
+					);
+				} 
+			});
+			var MyComponent = React.createClass({
+				render: function(){
+					return (
+						<div>
+							<h1>{ this.props.text }</h1>
+							<p> { this.props.children }</p>
+						</div>
+					);
+				} 
+			});
+			ReactDOM.render(
+				<section>
+					<HelloWorld text="Author" >The project files made by AmirHosseinAshouripour</HelloWorld>
+					<MyComponent text="Producer">Based On AmirHossein Azimi Tutorial</MyComponent> 
+				</section>, document.getElementById("root"));		
+			
+		</script>
+	</body>
+
+</html>
